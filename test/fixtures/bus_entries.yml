@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  unit_id: 1
+  operator_id: 1
+  shift_id: 1
+  laps: 1
+  average_time: 2013-09-28 16:37:38
+  preferent_tickets: 1
+  adult_tickets: 1
+  feria_total_income: 9.99
+  feria_tickets: 9.99
+  current_preferent_fare: 9.99
+  current_adult_fare: 9.99
+  current_feria_fare: 9.99
+  total_tickets: 1
+  total_income: 9.99
+  average_income: 9.99
+  worked_hours: 1
+  extra_hours: 1
+  operator_salary: 9.99
+  diesel_liters: 9.99
+  diesel_price: 9.99
+  unit_expenses: 9.99
+  other_expenses: 9.99
+  other_expenses_description: MyString
+
+two:
+  unit_id: 1
+  operator_id: 1
+  shift_id: 1
+  laps: 1
+  average_time: 2013-09-28 16:37:38
+  preferent_tickets: 1
+  adult_tickets: 1
+  feria_total_income: 9.99
+  feria_tickets: 9.99
+  current_preferent_fare: 9.99
+  current_adult_fare: 9.99
+  current_feria_fare: 9.99
+  total_tickets: 1
+  total_income: 9.99
+  average_income: 9.99
+  worked_hours: 1
+  extra_hours: 1
+  operator_salary: 9.99
+  diesel_liters: 9.99
+  diesel_price: 9.99
+  unit_expenses: 9.99
+  other_expenses: 9.99
+  other_expenses_description: MyString

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  period_number: 1
+  beginning_date: 2013-09-28
+  end_date: 2013-09-28
+  duration: MyString
+  status: MyString
+  file_name: MyString
+  total: 9.99
+  diesel_total: 9.99
+  ledger_account: MyString
+
+two:
+  period_number: 1
+  beginning_date: 2013-09-28
+  end_date: 2013-09-28
+  duration: MyString
+  status: MyString
+  file_name: MyString
+  total: 9.99
+  diesel_total: 9.99
+  ledger_account: MyString

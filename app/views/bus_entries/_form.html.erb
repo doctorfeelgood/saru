@@ -1,0 +1,146 @@
+<%= form_for @bus_entry, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :unit_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :unit_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :operator_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :operator_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :shift_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :shift_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :laps, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :laps, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :average_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.time_select :average_time, :class => 'time_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :preferent_tickets, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :preferent_tickets, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :adult_tickets, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :adult_tickets, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :feria_total_income, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :feria_total_income, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :feria_tickets, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :feria_tickets, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :current_preferent_fare, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :current_preferent_fare, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :current_adult_fare, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :current_adult_fare, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :current_feria_fare, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :current_feria_fare, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :total_tickets, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :total_tickets, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :total_income, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :total_income, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :average_income, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :average_income, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :worked_hours, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :worked_hours, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :extra_hours, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :extra_hours, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :operator_salary, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :operator_salary, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :diesel_liters, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :diesel_liters, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :diesel_price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :diesel_price, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :unit_expenses, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :unit_expenses, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :other_expenses, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :other_expenses, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :other_expenses_description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :other_expenses_description, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                bus_entries_path, :class => 'btn' %>
+  </div>
+<% end %>
