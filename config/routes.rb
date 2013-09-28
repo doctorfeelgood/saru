@@ -1,4 +1,10 @@
 Rutas::Application.routes.draw do
+  resources :operators
+
+
+  resources :units
+
+
   resources :partners
 
 

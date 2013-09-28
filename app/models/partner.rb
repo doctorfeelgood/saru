@@ -1,3 +1,4 @@
 class Partner < ActiveRecord::Base
-  # attr_accessible :title, :body
+	has_many :units
+  	attr_accessible :first_name, :last_name, :address, :phone_number, :email, :rfc
 end
