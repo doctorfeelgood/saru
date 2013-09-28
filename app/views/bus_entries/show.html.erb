@@ -1,0 +1,65 @@
+<%- model_class = BusEntry -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:unit_id) %>:</strong></dt>
+  <dd><%= @bus_entry.unit_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:operator_id) %>:</strong></dt>
+  <dd><%= @bus_entry.operator_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:shift_id) %>:</strong></dt>
+  <dd><%= @bus_entry.shift_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:laps) %>:</strong></dt>
+  <dd><%= @bus_entry.laps %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:average_time) %>:</strong></dt>
+  <dd><%= @bus_entry.average_time %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:preferent_tickets) %>:</strong></dt>
+  <dd><%= @bus_entry.preferent_tickets %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:adult_tickets) %>:</strong></dt>
+  <dd><%= @bus_entry.adult_tickets %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:feria_total_income) %>:</strong></dt>
+  <dd><%= @bus_entry.feria_total_income %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:feria_tickets) %>:</strong></dt>
+  <dd><%= @bus_entry.feria_tickets %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:current_preferent_fare) %>:</strong></dt>
+  <dd><%= @bus_entry.current_preferent_fare %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:current_adult_fare) %>:</strong></dt>
+  <dd><%= @bus_entry.current_adult_fare %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:current_feria_fare) %>:</strong></dt>
+  <dd><%= @bus_entry.current_feria_fare %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:total_tickets) %>:</strong></dt>
+  <dd><%= @bus_entry.total_tickets %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:total_income) %>:</strong></dt>
+  <dd><%= @bus_entry.total_income %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:average_income) %>:</strong></dt>
+  <dd><%= @bus_entry.average_income %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:worked_hours) %>:</strong></dt>
+  <dd><%= @bus_entry.worked_hours %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:extra_hours) %>:</strong></dt>
+  <dd><%= @bus_entry.extra_hours %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:operator_salary) %>:</strong></dt>
+  <dd><%= @bus_entry.operator_salary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:diesel_liters) %>:</strong></dt>
+  <dd><%= @bus_entry.diesel_liters %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:diesel_price) %>:</strong></dt>
+  <dd><%= @bus_entry.diesel_price %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:unit_expenses) %>:</strong></dt>
+  <dd><%= @bus_entry.unit_expenses %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:other_expenses) %>:</strong></dt>
+  <dd><%= @bus_entry.other_expenses %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:other_expenses_description) %>:</strong></dt>
+  <dd><%= @bus_entry.other_expenses_description %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              bus_entries_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_bus_entry_path(@bus_entry), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              bus_entry_path(@bus_entry),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  period_id: 1
+  type: 1
+  shift_total: 9.99
+  partner_earnings: 9.99
+  period_id: 1
+  day: 2013-09-28
+
+two:
+  period_id: 1
+  type: 1
+  shift_total: 9.99
+  partner_earnings: 9.99
+  period_id: 1
+  day: 2013-09-28
