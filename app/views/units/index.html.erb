@@ -1,15 +1,12 @@
 <%- model_class = Unit -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1> Unidades </h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:number) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:partner_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th> Unidad </th>
+      <th> Socio </th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -17,17 +14,14 @@
     <% @units.each do |unit| %>
       <tr>
         <td><%= link_to unit.id, unit_path(unit) %></td>
-        <td><%= unit.number %></td>
-        <td><%= unit.name %></td>
         <td><%= unit.partner_id %></td>
-        <td><%=l unit.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_unit_path(unit), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       unit_path(unit),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => '¿Seguro que desea eliminarlo permanentemente de la base de datos?')) },
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
