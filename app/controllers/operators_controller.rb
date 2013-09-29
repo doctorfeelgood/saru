@@ -44,7 +44,7 @@ class OperatorsController < ApplicationController
 
     respond_to do |format|
       if @operator.save
-        format.html { redirect_to @operator, notice: 'Operator was successfully created.' }
+        format.html { redirect_to @operator, notice: 'Operador agregado correctamente.' }
         format.json { render json: @operator, status: :created, location: @operator }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class OperatorsController < ApplicationController
 
     respond_to do |format|
       if @operator.update_attributes(params[:operator])
-        format.html { redirect_to @operator, notice: 'Operator was successfully updated.' }
+        format.html { redirect_to @operator, notice: 'Operador actualizado correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

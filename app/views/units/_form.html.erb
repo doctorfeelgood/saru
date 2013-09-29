@@ -1,25 +1,19 @@
 <%= form_for @unit, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :number, :class => 'control-label' %>
+    <%= f.label :number, 'Número de unidad', :class => 'control-label' %>
     <div class="controls">
       <%= f.number_field :number, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :partner_id, :class => 'control-label' %>
+    <%= f.label :partner_id, 'Socio propietario', :class => 'control-label' %>
     <div class="controls">
       <%= f.number_field :partner_id, :class => 'number_field' %>
     </div>
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit 'Agregar', :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 units_path, :class => 'btn' %>
   </div>

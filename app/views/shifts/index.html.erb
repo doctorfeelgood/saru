@@ -1,17 +1,16 @@
 <%- model_class = Shift -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1> Turnos </h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:period_id) %></th>
-      <th><%= model_class.human_attribute_name(:type) %></th>
-      <th><%= model_class.human_attribute_name(:shift_total) %></th>
-      <th><%= model_class.human_attribute_name(:partner_earnings) %></th>
-      <th><%= model_class.human_attribute_name(:day) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th> ID </th>
+      <th> Per&iacute;odo </th>
+      <th> Tipo </th>
+      <th> Turno total </th>
+      <th> Ganancias</th>
+      <th> D&iacute;a </th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -24,7 +23,6 @@
         <td><%= shift.shift_total %></td>
         <td><%= shift.partner_earnings %></td>
         <td><%= shift.day %></td>
-        <td><%=l shift.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_shift_path(shift), :class => 'btn btn-mini' %>
