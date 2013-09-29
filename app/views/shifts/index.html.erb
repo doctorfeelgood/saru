@@ -1,0 +1,44 @@
+<%- model_class = Shift -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:period_id) %></th>
+      <th><%= model_class.human_attribute_name(:type) %></th>
+      <th><%= model_class.human_attribute_name(:shift_total) %></th>
+      <th><%= model_class.human_attribute_name(:partner_earnings) %></th>
+      <th><%= model_class.human_attribute_name(:day) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shifts.each do |shift| %>
+      <tr>
+        <td><%= link_to shift.id, shift_path(shift) %></td>
+        <td><%= shift.period_id %></td>
+        <td><%= shift.type %></td>
+        <td><%= shift.shift_total %></td>
+        <td><%= shift.partner_earnings %></td>
+        <td><%= shift.day %></td>
+        <td><%=l shift.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_shift_path(shift), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      shift_path(shift),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_shift_path,
+            :class => 'btn btn-primary' %>

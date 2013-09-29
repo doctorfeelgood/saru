@@ -1,0 +1,29 @@
+<%- model_class = Shift -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:period_id) %>:</strong></dt>
+  <dd><%= @shift.period_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:type) %>:</strong></dt>
+  <dd><%= @shift.type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:shift_total) %>:</strong></dt>
+  <dd><%= @shift.shift_total %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:partner_earnings) %>:</strong></dt>
+  <dd><%= @shift.partner_earnings %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:day) %>:</strong></dt>
+  <dd><%= @shift.day %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              shifts_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_shift_path(@shift), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              shift_path(@shift),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

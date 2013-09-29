@@ -1,0 +1,2 @@
+module BusEntryVouchersHelper
+end

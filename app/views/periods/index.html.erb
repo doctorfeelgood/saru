@@ -1,0 +1,52 @@
+<%- model_class = Period -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:period_number) %></th>
+      <th><%= model_class.human_attribute_name(:beginning_date) %></th>
+      <th><%= model_class.human_attribute_name(:end_date) %></th>
+      <th><%= model_class.human_attribute_name(:duration) %></th>
+      <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:file_name) %></th>
+      <th><%= model_class.human_attribute_name(:total) %></th>
+      <th><%= model_class.human_attribute_name(:diesel_total) %></th>
+      <th><%= model_class.human_attribute_name(:ledger_account) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @periods.each do |period| %>
+      <tr>
+        <td><%= link_to period.id, period_path(period) %></td>
+        <td><%= period.period_number %></td>
+        <td><%= period.beginning_date %></td>
+        <td><%= period.end_date %></td>
+        <td><%= period.duration %></td>
+        <td><%= period.status %></td>
+        <td><%= period.file_name %></td>
+        <td><%= period.total %></td>
+        <td><%= period.diesel_total %></td>
+        <td><%= period.ledger_account %></td>
+        <td><%=l period.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_period_path(period), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      period_path(period),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_period_path,
+            :class => 'btn btn-primary' %>

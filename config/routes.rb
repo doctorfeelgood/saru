@@ -1,4 +1,22 @@
 Rutas::Application.routes.draw do
+  resources :bus_entries
+
+
+  resources :fares
+
+
+  resources :bus_entry_vouchers
+
+
+  resources :vouchers
+
+
+  resources :shifts
+
+
+  resources :periods
+
+
   resources :operators
 
 
