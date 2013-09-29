@@ -14,12 +14,12 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              units_path, :class => 'btn'  %>
+              units_path, :class => 'btn btn-default'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_unit_path(@unit), :class => 'btn' %>
+              edit_unit_path(@unit), :class => 'btn btn-default' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               unit_path(@unit),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => '¿Seguro que desea eliminarlo permanentemente de la base de datos?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-default btn-danger' %>
 </div>

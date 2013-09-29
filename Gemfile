@@ -16,7 +16,6 @@ gem 'quiet_assets', :group => :development
 gem 'will_paginate'
 gem "aws-s3", :require => "aws/s3"
 gem "i18n", "~> 0.6.0"
-gem 'twitter-bootstrap-rails', '~> 2.2.8'
 gem 'jquery-datatables-rails', :git => 'git://github.com/fairchild/jquery-datatables-rails.git'
 gem 'jquery-rails'
 

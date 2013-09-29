@@ -14,12 +14,12 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              bus_entry_vouchers_path, :class => 'btn'  %>
+              bus_entry_vouchers_path, :class => 'btn btn-default'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_bus_entry_voucher_path(@bus_entry_voucher), :class => 'btn' %>
+              edit_bus_entry_voucher_path(@bus_entry_voucher), :class => 'btn btn-default' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               bus_entry_voucher_path(@bus_entry_voucher),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-default btn-danger' %>
 </div>
