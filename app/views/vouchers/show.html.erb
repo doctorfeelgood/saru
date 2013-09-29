@@ -12,12 +12,12 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              vouchers_path, :class => 'btn'  %>
+              vouchers_path, :class => 'btn btn-default'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_voucher_path(@voucher), :class => 'btn' %>
+              edit_voucher_path(@voucher), :class => 'btn btn-default' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               voucher_path(@voucher),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => '¿Seguro que desea eliminarlo permanentemente de la base de datos?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-default btn-danger' %>
 </div>
