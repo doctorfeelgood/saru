@@ -1,0 +1,80 @@
+<%- model_class = BusEntry -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:unit_id) %></th>
+      <th><%= model_class.human_attribute_name(:operator_id) %></th>
+      <th><%= model_class.human_attribute_name(:shift_id) %></th>
+      <th><%= model_class.human_attribute_name(:laps) %></th>
+      <th><%= model_class.human_attribute_name(:average_time) %></th>
+      <th><%= model_class.human_attribute_name(:preferent_tickets) %></th>
+      <th><%= model_class.human_attribute_name(:adult_tickets) %></th>
+      <th><%= model_class.human_attribute_name(:feria_total_income) %></th>
+      <th><%= model_class.human_attribute_name(:feria_tickets) %></th>
+      <th><%= model_class.human_attribute_name(:current_preferent_fare) %></th>
+      <th><%= model_class.human_attribute_name(:current_adult_fare) %></th>
+      <th><%= model_class.human_attribute_name(:current_feria_fare) %></th>
+      <th><%= model_class.human_attribute_name(:total_tickets) %></th>
+      <th><%= model_class.human_attribute_name(:total_income) %></th>
+      <th><%= model_class.human_attribute_name(:average_income) %></th>
+      <th><%= model_class.human_attribute_name(:worked_hours) %></th>
+      <th><%= model_class.human_attribute_name(:extra_hours) %></th>
+      <th><%= model_class.human_attribute_name(:operator_salary) %></th>
+      <th><%= model_class.human_attribute_name(:diesel_liters) %></th>
+      <th><%= model_class.human_attribute_name(:diesel_price) %></th>
+      <th><%= model_class.human_attribute_name(:unit_expenses) %></th>
+      <th><%= model_class.human_attribute_name(:other_expenses) %></th>
+      <th><%= model_class.human_attribute_name(:other_expenses_description) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bus_entries.each do |bus_entry| %>
+      <tr>
+        <td><%= link_to bus_entry.id, bus_entry_path(bus_entry) %></td>
+        <td><%= bus_entry.unit_id %></td>
+        <td><%= bus_entry.operator_id %></td>
+        <td><%= bus_entry.shift_id %></td>
+        <td><%= bus_entry.laps %></td>
+        <td><%= bus_entry.average_time %></td>
+        <td><%= bus_entry.preferent_tickets %></td>
+        <td><%= bus_entry.adult_tickets %></td>
+        <td><%= bus_entry.feria_total_income %></td>
+        <td><%= bus_entry.feria_tickets %></td>
+        <td><%= bus_entry.current_preferent_fare %></td>
+        <td><%= bus_entry.current_adult_fare %></td>
+        <td><%= bus_entry.current_feria_fare %></td>
+        <td><%= bus_entry.total_tickets %></td>
+        <td><%= bus_entry.total_income %></td>
+        <td><%= bus_entry.average_income %></td>
+        <td><%= bus_entry.worked_hours %></td>
+        <td><%= bus_entry.extra_hours %></td>
+        <td><%= bus_entry.operator_salary %></td>
+        <td><%= bus_entry.diesel_liters %></td>
+        <td><%= bus_entry.diesel_price %></td>
+        <td><%= bus_entry.unit_expenses %></td>
+        <td><%= bus_entry.other_expenses %></td>
+        <td><%= bus_entry.other_expenses_description %></td>
+        <td><%=l bus_entry.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_bus_entry_path(bus_entry), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      bus_entry_path(bus_entry),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_bus_entry_path,
+            :class => 'btn btn-primary' %>

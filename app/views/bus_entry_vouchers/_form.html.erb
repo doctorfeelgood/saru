@@ -1,0 +1,26 @@
+<%= form_for @bus_entry_voucher, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :voucher_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :voucher_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :bus_entry_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :bus_entry_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :amount, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :amount, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                bus_entry_vouchers_path, :class => 'btn' %>
+  </div>
+<% end %>
