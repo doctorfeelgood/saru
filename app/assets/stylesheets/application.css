@@ -16,3 +16,110 @@
  .form-actions{
  	margin-top:10px;
  }
+
+ .period{
+ 	display:block;
+ 	clear:both;
+ }
+
+.day{
+	height:101px;
+	width:100px;
+	border:1px solid #333;
+	float:left;
+	margin-right:2px;
+}
+	.day_name{
+		width:99px;
+		height:20px;
+		line-height:20px;
+		border-bottom:1px solid #333;
+		text-align:center;
+		font-weight: bold;
+	}
+
+	.shift_1{
+		text-align:center;
+		line-height: 40px;
+		height:40px;
+		width:69px;
+		border-bottom:1px solid #333;
+		float:left;
+	}
+
+	.shift_2{
+		text-align:center;
+		line-height: 40px;	
+		height:40px;
+		width:69px;
+		float:left;
+	}
+
+	.month_day{
+		border-left:1px solid #333;
+		height:80px;
+		float:right;
+		width:29px;
+	}
+
+	.month_day_text {
+		width: 80px;
+		height: 30px;
+		font-weight: bold;
+		font-size: 1.4em;
+		line-height: 28px;
+		margin-top: 25px;
+		margin-left: -26px;
+		text-align: center;
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+
+		/* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		-o-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+
+		/* Should be unset in IE9+ I think. */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
+
+
+
+	.table_day{
+		width:100%;
+		border:1px solid #333;
+	}
+
+
+	.table_day td{
+		border:1px solid #333;
+		text-align:center;
+	}
+
+	.shift{
+		padding:2px;
+	}
+
+	.table_month_day_text{
+		height:100px;
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+
+		/* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		-o-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+
+		/* Should be unset in IE9+ I think. */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
