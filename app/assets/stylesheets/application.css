@@ -25,15 +25,18 @@
 .day{
 	height:101px;
 	width:100px;
-	border:1px solid #333;
+	border:1px solid #ddd;
 	float:left;
 	margin-right:2px;
+	color: #666;
+	border-color: #ccc #ccc #b5b5b5 #ddd;
+	border-radius: 3px;
 }
 	.day_name{
 		width:99px;
 		height:20px;
 		line-height:20px;
-		border-bottom:1px solid #333;
+		border-bottom:1px solid #ddd;
 		text-align:center;
 		font-weight: bold;
 	}
@@ -43,8 +46,13 @@
 		line-height: 40px;
 		height:40px;
 		width:69px;
-		border-bottom:1px solid #333;
 		float:left;
+		border-bottom:1px solid #ddd;
+
+	}
+
+	.shift_1_complete{
+		background-color: #f7f7f9;
 	}
 
 	.shift_2{
@@ -55,8 +63,13 @@
 		float:left;
 	}
 
+	.shift_2_complete{
+		background-color: #f7f7f9;
+		border-bottom:1px solid #ddd;
+	}
+
 	.month_day{
-		border-left:1px solid #333;
+		border-left:1px solid #ddd;
 		height:80px;
 		float:right;
 		width:29px;
