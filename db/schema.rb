@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130928233738) do
+ActiveRecord::Schema.define(:version => 20131005212444) do
 
   create_table "bus_entries", :force => true do |t|
     t.integer  "unit_id"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(:version => 20130928233738) do
 
   create_table "shifts", :force => true do |t|
     t.integer  "period_id"
-    t.integer  "type"
+    t.integer  "shift_type"
     t.decimal  "shift_total",      :precision => 8, :scale => 2
     t.decimal  "partner_earnings", :precision => 8, :scale => 2
     t.date     "day"
@@ -109,6 +109,36 @@ ActiveRecord::Schema.define(:version => 20130928233738) do
     t.integer  "partner_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "user_sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "user_sessions", ["session_id"], :name => "index_user_sessions_on_session_id"
+  add_index "user_sessions", ["updated_at"], :name => "index_user_sessions_on_updated_at"
+
+  create_table "users", :force => true do |t|
+    t.string   "name",                :default => "", :null => false
+    t.string   "login"
+    t.string   "crypted_password",                    :null => false
+    t.string   "password_salt",                       :null => false
+    t.string   "email",                               :null => false
+    t.string   "persistence_token",                   :null => false
+    t.string   "single_access_token",                 :null => false
+    t.string   "perishable_token",                    :null => false
+    t.integer  "login_count",         :default => 0,  :null => false
+    t.integer  "failed_login_count",  :default => 0,  :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
   end
 
   create_table "vouchers", :force => true do |t|
