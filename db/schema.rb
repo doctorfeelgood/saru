@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130928233738) do
+ActiveRecord::Schema.define(:version => 20131003053551) do
 
   create_table "bus_entries", :force => true do |t|
     t.integer  "unit_id"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(:version => 20130928233738) do
 
   create_table "shifts", :force => true do |t|
     t.integer  "period_id"
-    t.integer  "type"
+    t.integer  "shift_type"
     t.decimal  "shift_total",      :precision => 8, :scale => 2
     t.decimal  "partner_earnings", :precision => 8, :scale => 2
     t.date     "day"

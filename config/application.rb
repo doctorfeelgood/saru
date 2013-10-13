@@ -58,5 +58,9 @@ module Rutas
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.dias = %w(Domingo Lunes Martes Mi&eacute;rcoles Jueves Viernes S&aacute;bado)
+    config.meses_abr = %w(Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dec)
+
   end
 end

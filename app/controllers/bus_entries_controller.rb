@@ -25,6 +25,7 @@ class BusEntriesController < ApplicationController
   # GET /bus_entries/new.json
   def new
     @bus_entry = BusEntry.new
+    @fares = Fare.all
 
     respond_to do |format|
       format.html # new.html.erb

@@ -1,214 +1,35 @@
 <%- model_class = Period -%>
+<%
+today  = Date.today
+first_day = (today.wday==3) ? today : today-(today.wday-3)
+%>
+
 
 <div class='period'>
 
-  <div class="row">
-    <div class="col-md-8"><h2>Semana 32</h2></div>
-    <div class="col-md-4"><button type="button" class="btn btn-primary">Default button</button></div>
+  <div class="row period_title">
+    <div class="week_title"><h2>Semana <%=today.cweek%></h2></div>
+    <div class="period_button"><button type="button" class="btn btn-primary" style="margin-top:18px;">Capturar Jornada</button></div>
   </div>
 
-    
-    
+<%(first_day..(first_day+6.days)).each do |day|%>
 
   <div class='day'>
-    <div class='day_name'>Mi&eacute;rcoles</div>
-    <div class='shift_1'>
-      Shift 1
-    </div>
-    <div class='month_day'>
-      <div class='month_day_text'>Oct 27</div>
-    </div>
-    <div class='shift_2'>
-      Shift 2
-    </div>
-  </div>
-
-  <div class='day'>
-    <div class='day_name'>Jueves</div>
+    <div class='day_name'><%=(Rutas::Application.config.dias[day.wday]).html_safe%></div>
     <div class='shift_1 shift_1_complete'>
       Shift 1
     </div>
     <div class='month_day'>
-      <div class='month_day_text'>Oct 27</div>
+      <div class='month_day_text'><%=(Rutas::Application.config.meses_abr[day.mon]).html_safe%> <%=day.mday%></div>
     </div>
     <div class='shift_2 shift_2_complete'>
       Shift 2
     </div>
   </div>
-
-  <div class='day'>
-    <div class='day_name'>Viernes</div>
-    <div class='shift_1'>
-      Shift 1
-    </div>
-    <div class='month_day'>
-      <div class='month_day_text'>Oct 27</div>
-    </div>
-    <div class='shift_2'>
-      Shift 2
-    </div>
-  </div>
-
-  <div class='day'>
-    <div class='day_name'>S&aacute;bado</div>
-    <div class='shift_1'>
-      Shift 1
-    </div>
-    <div class='month_day'>
-      <div class='month_day_text'>Oct 27</div>
-    </div>
-    <div class='shift_2'>
-      Shift 2
-    </div>
-  </div>
-
-  <div class='day'>
-    <div class='day_name'>Domingo</div>
-    <div class='shift_1'>
-      Shift 1
-    </div>
-    <div class='month_day'>
-      <div class='month_day_text'>Oct 27</div>
-    </div>
-    <div class='shift_2'>
-      Shift 2
-    </div>
-  </div>
-
-  <div class='day'>
-    <div class='day_name'>Lunes</div>
-    <div class='shift_1'>
-      Shift 1
-    </div>
-    <div class='month_day'>
-      <div class='month_day_text'>Oct 27</div>
-    </div>
-    <div class='shift_2'>
-      Shift 2
-    </div>
-  </div>
-
-  <div class='day'>
-    <div class='day_name'>Martes</div>
-    <div class='shift_1'>
-      Shift 1
-    </div>
-    <div class='month_day'>
-      <div class='month_day_text'>Oct 27</div>
-    </div>
-    <div class='shift_2'>
-      Shift 2
-    </div>
-  </div>
-</div>
+<%end%>
 
 <div class='clearfix'></div>
 <br /><br /><br />
-
-<table width='100%'>
-  <tr>
-    <td>
-      <table class='table_day'>
-        <tr>
-          <td colspan=2>Miercoles</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 1</td>
-          <td rowspan=2 style='width:30px'><div class='table_month_day_text'>Oct 27</div></td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 2</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table class='table_day'>
-        <tr>
-          <td colspan=2>Miercoles</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 1</td>
-          <td rowspan=2 class='table_month_day_text'>Oct 27</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 2</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table class='table_day'>
-        <tr>
-          <td colspan=2>Miercoles</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 1</td>
-          <td rowspan=2 class='table_month_day_text'>Oct 27</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 2</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table class='table_day'>
-        <tr>
-          <td colspan=2>Miercoles</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 1</td>
-          <td rowspan=2 class='table_month_day_text'>Oct 27</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 2</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table class='table_day'>
-        <tr>
-          <td colspan=2>Miercoles</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 1</td>
-          <td rowspan=2 class='table_month_day_text'>Oct 27</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 2</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table class='table_day'>
-        <tr>
-          <td colspan=2>Miercoles</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 1</td>
-          <td rowspan=2 class='table_month_day_text'>Oct 27</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 2</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table class='table_day'>
-        <tr>
-          <td colspan=2>Miercoles</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 1</td>
-          <td rowspan=2 class='table_month_day_text'>Oct 27</td>
-        </tr>
-        <tr>
-          <td class='shift'>turno 2</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-
-
 
 <div class="page-header">
   <h1> Per&iacute;odos </h1>

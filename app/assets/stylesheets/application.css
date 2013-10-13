@@ -9,13 +9,31 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  *= require bootstrap
+ *= require_tree .
+
  */
 
  .form-actions{
  	margin-top:10px;
  }
+
+.period_title{
+	height:60px;
+}
+
+.week_title{
+	margin-left: 15px;
+	height:40px;
+	width:190px;
+	float: left
+}
+
+.period_button{
+	height:40px;
+	width:200px;
+	float:left;
+}
 
  .period{
  	display:block;
@@ -101,38 +119,3 @@
 		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 	}
 
-
-
-	.table_day{
-		width:100%;
-		border:1px solid #333;
-	}
-
-
-	.table_day td{
-		border:1px solid #333;
-		text-align:center;
-	}
-
-	.shift{
-		padding:2px;
-	}
-
-	.table_month_day_text{
-		height:100px;
-		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		-o-transform: rotate(-90deg);
-		transform: rotate(-90deg);
-
-		/* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
-		-webkit-transform-origin: 50% 50%;
-		-moz-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-		-o-transform-origin: 50% 50%;
-		transform-origin: 50% 50%;
-
-		/* Should be unset in IE9+ I think. */
-		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-	}

@@ -20,7 +20,7 @@
   <div class="control-group">
     <%= f.label :laps, 'Vueltas', :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :laps, :class => 'number_field' %>
+      <%= f.number_field :laps, :class => 'number_field', :value=>0 %>
     </div>
   </div>
   <div class="control-group">
@@ -32,49 +32,50 @@
   <div class="control-group">
     <%= f.label :preferent_tickets, 'Boletos preferentes', :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :preferent_tickets, :class => 'number_field' %>
+      <%= f.number_field :preferent_tickets, :class => 'number_field', :value=>0 %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :adult_tickets, 'Boletos adultos', :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :adult_tickets, :class => 'number_field' %>
+      <%= f.number_field :adult_tickets, :class => 'number_field', :value=>0 %>
     </div>
   </div>
+  <div class="control-group">
+    <%= f.label :feria_tickets, 'Boletos tarjeta feria', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :feria_tickets, :class => 'text_field', :value=>0 %>
+    </div>
+  </div>  
   <div class="control-group">
     <%= f.label :feria_total_income, 'Total tarjeta feria', :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :feria_total_income, :class => 'text_field' %>
     </div>
   </div>
-  <div class="control-group">
-    <%= f.label :feria_tickets, 'Boletos tarjeta feria', :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :feria_tickets, :class => 'text_field' %>
-    </div>
-  </div>
+
   <div class="control-group">
     <%= f.label :current_preferent_fare, 'Tarifa de boletos preferntes', :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :current_preferent_fare, :class => 'text_field' %>
+      <%= f.text_field :current_preferent_fare, :class => 'text_field', :value=>@fares[0].price %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :current_adult_fare, 'Tarifa de boletos adultos', :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :current_adult_fare, :class => 'text_field' %>
+      <%= f.text_field :current_adult_fare, :class => 'text_field', :value=>@fares[1].price  %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :current_feria_fare, 'Tarifa de tarjeta feria', :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :current_feria_fare, :class => 'text_field' %>
+      <%= f.text_field :current_feria_fare, :class => 'text_field', :value=>@fares[2].price  %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :total_tickets, 'Boletos totales', :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :total_tickets, :class => 'number_field' %>
+      <%= f.number_field :total_tickets, :class => 'number_field', :value=>0 %>
     </div>
   </div>
   <div class="control-group">
