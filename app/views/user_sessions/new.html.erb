@@ -1,0 +1,14 @@
+<h1>Iniciar sesi&oacute;n</h1>
+
+<%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
+   <%= render "shared/error_messages", :target => @user_session %>
+    <%= f.label :email, 'Correo' %><br />
+    <%= f.text_field :email %><br />
+    <br />
+    <%= f.label :password, 'Contraseña' %><br />
+    <%= f.password_field :password %><br />
+    <br />
+    <%= f.check_box :remember_me %>&nbsp;<%= f.label :remember_me, 'Recordarme' %><br />
+    <br />
+    <%= f.submit "iniciar sesion" %>
+<% end %>
